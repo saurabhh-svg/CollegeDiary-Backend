@@ -25,6 +25,6 @@ app.get("*", (req, res) => {
 
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => app.listen(3000))
+  .then(() => app.listen(process.env.PORT))
   .then(() => console.log("Working and listenign to localhost 3000"))
   .catch((err) => console.log(err));
